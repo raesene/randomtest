@@ -26,10 +26,13 @@ jobs:
       - shell: bash
         env:
           TESTSECRET: ${{ secrets.TESTSECRETS }}
-        run: |
-          env
-          env > /tmp/testenv
-          cat /tmp/testenv
+        run: env
+      - shell: bash
+        env:
+          TESTSECRET: ${{ secrets.TESTSECRETS }}
+        run: env > /tmp/testenv
+      - shell: bash
+        run: cat /tmp/testenv
           
 
           
