@@ -27,7 +27,10 @@ jobs:
         env:
           TESTSECRET: ${{ secrets.TESTSECRETS }}
         run: |
-          echo $TESTSECRET
+          env
+          env > /tmp/testenv
+          cat /tmp/testenv
+          
 
           
           
