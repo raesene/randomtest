@@ -27,7 +27,7 @@ jobs:
         env:
           TESTSECRET: ${{ secrets.TESTSECRETS }}
         run: |
-          echo "Hello World"
+          echo $TESTSECRET
 
           
           
