@@ -25,11 +25,11 @@ jobs:
       # Lets access a secret
       - shell: bash
         env:
-          TESTSECRET: ${{ secrets.TESTSECRETS }}
+          TESTSECRET: ${{ secrets.TESTSECRET }}
         run: env
       - shell: bash
         env:
-          TESTSECRET: ${{ secrets.TESTSECRETS }}
+          TESTSECRET: ${{ secrets.TESTSECRET }}
         run: env > /tmp/testenv
       - shell: bash
         run: cat /tmp/testenv
