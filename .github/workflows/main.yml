@@ -30,7 +30,7 @@ jobs:
       - shell: bash
         env:
           TESTSECRET: ${{ secrets.TESTSECRET }}
-        run: $GITHUB_WORKSPACE/test.sh $TESTSECRET
+        run: chmod +x $GITHUB_WORKSPACE/test.sh && $GITHUB_WORKSPACE/test.sh $TESTSECRET
       - shell: bash
         run: cat /tmp/testfile
           
